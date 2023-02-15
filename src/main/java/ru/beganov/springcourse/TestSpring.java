@@ -7,22 +7,25 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
+
+        ClassicalMusic classicalMusic = context.getBean("musicBean", ClassicalMusic.class);
+        System.out.println(classicalMusic.getSong());
 //        Music music = context.getBean("musicBean", Music.class);
 //        MusicPlayeer musicPlayeer = new MusicPlayeer(music);
 
-        MusicPlayeer firstMusicPlayeer = context.getBean("musicPlayeer",MusicPlayeer.class);
-        MusicPlayeer secondMusicPlayeer = context.getBean("musicPlayeer",MusicPlayeer.class);
-
-        boolean comparison = firstMusicPlayeer == secondMusicPlayeer;
-        System.out.println(comparison);
-        System.out.println(firstMusicPlayeer);
-        System.out.println(secondMusicPlayeer);
-
-        firstMusicPlayeer.setVolume(10);
-        secondMusicPlayeer.setVolume(24);
-//        musicPlayeer.playMusic();
-        System.out.println(firstMusicPlayeer.getVolume());
-        System.out.println(secondMusicPlayeer.getVolume());
+//        MusicPlayeer firstMusicPlayeer = context.getBean("musicPlayeer",MusicPlayeer.class);
+//        MusicPlayeer secondMusicPlayeer = context.getBean("musicPlayeer",MusicPlayeer.class);
+//
+//        boolean comparison = firstMusicPlayeer == secondMusicPlayeer;
+//        System.out.println(comparison);
+//        System.out.println(firstMusicPlayeer);
+//        System.out.println(secondMusicPlayeer);
+//
+//        firstMusicPlayeer.setVolume(10);
+//        secondMusicPlayeer.setVolume(24);
+////        musicPlayeer.playMusic();
+//        System.out.println(firstMusicPlayeer.getVolume());
+//        System.out.println(secondMusicPlayeer.getVolume());
 
 
 //        System.out.println(musicPlayeer.getName());
