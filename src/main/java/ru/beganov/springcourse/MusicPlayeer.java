@@ -1,38 +1,45 @@
 package ru.beganov.springcourse;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MusicPlayeer {
-    private Music music;
+    //    Внедрение бина через поле
+//    @Autowired
+//    private Music music;
+    private ClassicalMusic classicalMusic;
+    private RockMusic rockMusic;
+
+    @Autowired
+    public MusicPlayeer(ClassicalMusic classicalMusic, RockMusic rockMusic) {
+        this.classicalMusic = classicalMusic;
+        this.rockMusic = rockMusic;
+    }
+
     private String name;
     private int volume;
 
-    public MusicPlayeer(Music music) {
-        this.music = music;
+//    Внедрение бина через конструктор
+//    @Autowired
+//    public MusicPlayeer(Music music) {
+//        this.music = music;
+//    }
+
+    //    Внедрение бина через сеттер
+//    @Autowired
+//    public void setMusic(Music music) {
+//        this.music = music;
+//    }
+
+
+    public String playMusic() {
+        return "Playing: " + classicalMusic.getSong();
+
     }
 
-    public MusicPlayeer() {
-    }
+//    public void setMusic(Music music) {
+//        this.music = music;
+//    }
 
-    public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
-    }
-
-    public void setMusic(Music music) {
-        this.music = music;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
 }
