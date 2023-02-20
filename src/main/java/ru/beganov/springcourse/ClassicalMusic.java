@@ -2,6 +2,8 @@ package ru.beganov.springcourse;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -15,13 +17,15 @@ public class ClassicalMusic implements Music{
 //        return new ClassicalMusic();
 //    }
 //
-//    public void doInit(){
-//        System.out.println("Doing initializing...");
-//    }
-//
-//    public void doDestroy(){
-//        System.out.println("Destruction...");
-//    }
+    @PostConstruct
+    public void doInit(){
+        System.out.println("Doing initializing...");
+    }
+
+    @PreDestroy
+    public void doDestroy(){
+        System.out.println("Destruction...");
+    }
 
     @Override
     public String getSong() {

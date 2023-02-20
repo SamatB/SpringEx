@@ -10,7 +10,7 @@ public class TestSpring {
 
 //        MusicPlayeer musicPlayeer = context.getBean("musicPlayeer", MusicPlayeer.class);
 //        musicPlayeer.playMusic();
-//        ClassicalMusic classicalMusic = context.getBean("someRockMusic", ClassicalMusic.class);
+        ClassicalMusic classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
 //        System.out.println(classicalMusic.getSong());
 //        Music rockMusic = context.getBean("someRockMusic", Music.class);
 //        MusicPlayeer musicPlayeer = new MusicPlayeer(rockMusic);
@@ -37,8 +37,14 @@ public class TestSpring {
 //        System.out.println(musicPlayeer.getName());
 //        System.out.println(musicPlayeer.getVolume());
 
-        Computer computer = context.getBean("computer", Computer.class);
-        System.out.println(computer);
+//        Computer computer = context.getBean("computer", Computer.class);
+//        System.out.println(computer);
+
+        MusicPlayeer musicPlayeer = context.getBean("musicPlayeer", MusicPlayeer.class);
+        System.out.println(musicPlayeer.getName());
+        System.out.println(musicPlayeer.getVolume());
+
+
         context.close();
     }
 }
