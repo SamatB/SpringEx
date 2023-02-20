@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
-<!--    Слздание бинов через Джава Аннотации-->
-    <context:component-scan base-package="ru.beganov.springcourse"/>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--        http://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--        http://www.springframework.org/schema/context-->
+<!--        http://www.springframework.org/schema/context/spring-context.xsd">-->
+<!--&lt;!&ndash;    Слздание бинов через Джава Аннотации&ndash;&gt;-->
+<!--    <context:component-scan base-package="ru.beganov.springcourse"/>-->
 
-    <!--    Создание бинов через XML-->
-        <context:property-placeholder location="classpath*:musicPlayeer.properties"/>
-    <!--    <bean id="musicBean"-->
-    <!--          class="ru.beganov.springcourse.ClassicalMusic"-->
-    <!--          init-method="doInit"-->
-    <!--          destroy-method="doDestroy"-->
-    <!--          factory-method="getClassicalMusic">-->
-    <!--    </bean>-->
-    <!--    <bean id="musicPlayeer"-->
-    <!--          class="ru.beganov.springcourse.MusicPlayeer"-->
-    <!--          scope="prototype">-->
+<!--    &lt;!&ndash;    Создание бинов через XML&ndash;&gt;-->
+<!--        <context:property-placeholder location="classpath*:musicPlayeer.properties"/>-->
+<!--    &lt;!&ndash;    <bean id="musicBean"&ndash;&gt;-->
+<!--    &lt;!&ndash;          class="ru.beganov.springcourse.ClassicalMusic"&ndash;&gt;-->
+<!--    &lt;!&ndash;          init-method="doInit"&ndash;&gt;-->
+<!--    &lt;!&ndash;          destroy-method="doDestroy"&ndash;&gt;-->
+<!--    &lt;!&ndash;          factory-method="getClassicalMusic">&ndash;&gt;-->
+<!--    &lt;!&ndash;    </bean>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <bean id="musicPlayeer"&ndash;&gt;-->
+<!--    &lt;!&ndash;          class="ru.beganov.springcourse.MusicPlayeer"&ndash;&gt;-->
+<!--    &lt;!&ndash;          scope="prototype">&ndash;&gt;-->
 
-    <!--        <property name="music" ref="musicBean"/>-->
-    <!--        <property name="name" value="${musicPlayeer.name}"/>-->
-    <!--        <property name="volume" value="${musicPlayeer.volume}"/>-->
-    <!--    </bean>-->
+<!--    &lt;!&ndash;        <property name="music" ref="musicBean"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <property name="name" value="${musicPlayeer.name}"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <property name="volume" value="${musicPlayeer.volume}"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </bean>&ndash;&gt;-->
 
-</beans>
+<!--</beans>-->
